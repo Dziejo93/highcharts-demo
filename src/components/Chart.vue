@@ -13,7 +13,6 @@ export default {
         chart: {
           type: "line",
           height: "700px",
-          redraw: true,
           animation: false,
           zoomType: "xy",
           panning: true,
@@ -32,7 +31,20 @@ export default {
         series: this.series,
         xAxis: {
           type: "datetime"
-        }
+        },
+        yAxis: [
+          {
+            title: { text: "Current [A]" },
+            gridLineWidth: 0.5,
+            showEmpty: false
+          },
+          {
+            title: { text: "Voltage [V]" },
+            gridLineWidth: 0.5,
+            showEmpty: false,
+            opposite: true
+          }
+        ]
       };
     }
   }

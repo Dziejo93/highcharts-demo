@@ -14,6 +14,7 @@ const generateSeries = data => {
       animation: false,
       name: attribute,
       data: data[attribute],
+      yAxis: attribute === "current" ? 0 : 1,
       marker: { enabled: true, radius: 3 },
       states: { hover: { lineWidthPlus: 0 } }
     };
